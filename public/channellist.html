@@ -1,0 +1,14 @@
+<h3>Channel List</h3>
+<input type="text" ng-model="newChannelName">
+<button ng-click="addChannel()">Add Channel</button>
+<ul>
+  <li ng-repeat="channel in channels">
+    <div>
+    <h2>{{ channel.name }} - {{ channel.info.name }}</h2>
+    <p>{{ channel.info.description }}</p>
+    <a href="{{ channel.info.url }}">{{ channel.info.url }}</a>
+    <p><strong>total videos</strong> : {{ channel.info.total_videos }}</p>
+    </div>
+    <h1>[ <a href="/#/channel/{{channel.name}}">videos</a> ]</h1>
+  </li>
+</ul>
